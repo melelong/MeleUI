@@ -1,0 +1,10 @@
+# 忽略⽬录
+examples/
+packages/
+public/
+# 忽略指定⽂件
+vue.config.js
+babel.config.js
+*.map
+.temp
+.cache

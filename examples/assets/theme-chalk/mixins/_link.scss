@@ -1,0 +1,30 @@
+@import '../common/var.scss';
+
+@mixin link-variant($color){
+
+  &{
+    color:$color;
+  }
+
+  &:hover{
+    color:mix($--color-white,$color,20%);
+  }
+
+  &.is-underline:hover::after{
+    position: absolute;
+    content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right:0;
+      border-bottom: 1px solid $color;
+  }
+
+  &.is-disabled:hover::after{
+    display: none;
+  }
+
+  &.is-disabled,&.is-disabled:hover{
+    color:mix($--color-white,$color);
+  }
+}

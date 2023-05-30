@@ -1,0 +1,66 @@
+@import "./config.scss";
+@import "../common/var.scss";
+
+/** BEM
+----------------*/
+
+//  .ml-xxx
+@mixin b($block) {
+  $B: $namespace + '-' + $block;
+
+  .#{$B} {
+    box-sizing: border-box;
+    @content;
+  }
+}
+
+//  &--xxx
+@mixin m($modifier) {
+  // &--flex
+  $currentSelector: "";
+
+  @each $unit in $modifier {
+    $currentSelector: $currentSelector + & + $modifier-separator + $unit + ',';
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      box-sizing: border-box;
+      @content;
+    }
+  }
+}
+
+//  .ml-xxx__xxx
+@mixin  s($block,$slotName) {
+  $S:$namespace + '-' + $block + $ml-separator + $slotName;
+
+  .#{$S} {
+    box-sizing: border-box;
+    @content;
+  }
+}
+
+//  .is-xxx
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      box-sizing: border-box;
+      @content;
+    }
+  }
+}
+
+
+/* 断点 （break points）
+------------------------*/
+@mixin res($key, $map: $--breakpoints) {
+  @if map-has-key($map, $key) {
+    @media only screen and #{inspect(map-get($map, $key))} {
+      box-sizing: border-box;
+      @content;
+    }
+  } @else {
+    @warn "undefined points: `#{$map}`"
+  }
+};

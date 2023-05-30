@@ -1,0 +1,77 @@
+@import './mixins/mixins.scss';
+@import './common/var.scss';
+
+@include b(dialog){
+  position: relative;
+  box-sizing: border-box;
+  margin: $--dialog-margin;
+  background: $--dialog-background-color;
+  border-radius: $--dialog-border-radius;
+  -webkit-box-shadow: $--dialog-box-shadow;
+  box-shadow: $--dialog-box-shadow;
+  width: $--dialog-width;
+  @include s(dialog,header){
+    padding: $--dialog-header-padding;
+    @include s(dialog,title){
+      line-height: $--dialog-title-line-height;
+      font-size: $--dialog-title-font-size;
+      color: $--dialog-title-color;
+    }
+    @include s(dialog,headerbtn){
+      position: absolute;
+      top: $--dialog-headerbtn-top;
+      right: $--dialog-headerbtn-right;
+      padding: 0;
+      background: 0 0;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+      font-size: $--dialog-headerbtn-font-size;
+      @include s(dialog,close){
+        color: $--dialog-close-color;
+      }
+    }
+  }
+  @include s(dialog,body){
+    word-break: break-all;
+    padding: $--dialog-body-padding;
+    color: $--dialog-body-color;
+    font-size: $--dialog-body-font-size;
+  }
+  @include s(dialog,footer){
+    padding: $--dialog-footer-padding;
+    text-align: $--dialog-footer-text-align;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+@include s(dialog,wrapper){
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+  background-color: $--dialog-wrapper-background-color;
+
+  &.dialog-fade-enter-active {
+    animation: fade $--dialog-fade-animation-timer;
+  }
+
+  &.dialog-fade-leave-active {
+    animation: fade $--dialog-fade-animation-timer reverse;
+  }
+
+  @keyframes fade{
+    0%{
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}

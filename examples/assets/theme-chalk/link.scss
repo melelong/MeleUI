@@ -1,0 +1,52 @@
+@import './mixins/mixins.scss';
+@import './mixins/link';
+@import './common/var.scss';
+
+$linkColors:(
+  'primary':$--link-primary-font-color,
+  'success':$--link-success-font-color,
+  'warning':$--link-warning-font-color,
+  'danger':$--link-danger-font-color,
+  'info':$--link-info-font-color,
+);
+
+@include b(link){
+  position: relative;
+  text-decoration: none;
+  font-size: $--link-font-size;
+  font-weight: $--link-font-weight;
+  color:$--link-default-font-color;
+  cursor: pointer;
+
+  &:hover{
+    color:$--link-active-font-color;
+  }
+
+  @include when(underline){
+    &:hover::after{
+    position: absolute;
+    content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right:0;
+      border-bottom: 1px solid $--link-active-font-color;
+    }   
+  }
+
+  @include when(disabled){
+    cursor: not-allowed;
+    color:mix($--color-white,$--link-default-font-color);
+    
+    &:hover::after{
+      display: none;
+    }
+  }
+
+  @each $type,$color in $linkColors {
+    @include m($type){
+      @include link-variant($color);
+      
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import './mixins/mixins.scss';
+@import './common/var.scss';
+
+@include b(footer){
+  padding: $--footer-padding;
+  flex-shrink: 0;
+}

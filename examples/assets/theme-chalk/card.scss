@@ -1,0 +1,35 @@
+@import './mixins/mixins.scss';
+@import './common/var.scss';
+
+@include b(card){
+  border-radius: $--card-default-border-radius;
+  border: $--card-default-border;
+  background-color: $--card-default-background-color;
+  overflow: hidden;
+  color: $--card-default-font-color;
+  -webkit-transition: .3s;
+  transition: .3s;
+
+  @include when(always-shadow){
+    box-shadow: $--card-default-shadow;
+  }
+
+  @include when(hover-shadow){
+    &:hover,&:focus{
+      box-shadow: $--card-default-shadow;
+    }
+  }
+
+  @include when(never-shadow){
+    box-shadow: none;
+  }
+}
+@include s(card,header){
+  padding: $--card-default-header-padding-vertical $--card-default-header-padding-horizontal;
+  border-bottom: $--card-default-header-border;
+  box-sizing: border-box;
+}
+
+@include s(card,body){
+  padding: 20px;
+}

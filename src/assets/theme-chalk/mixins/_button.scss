@@ -1,0 +1,82 @@
+@import '../common/var.scss';
+
+@mixin button-variant($backgroundColor,$borderColor,$fontColor){
+    background-color: $backgroundColor;
+    border-color: $borderColor;
+    color:$fontColor;
+
+    &:hover,&:focus{
+      background-color:  mix($--color-white,$backgroundColor,$--button-active-shade-percent);
+      border-color:  mix($--color-white,$backgroundColor,$--button-active-shade-percent);
+      color:$--color-white;
+    }
+
+    &:active {
+      background-color: mix($--color-black,$backgroundColor,$--button-active-shade-percent);
+      border-color:mix($--color-black,$backgroundColor,$--button-active-shade-percent);
+      color:$--color-white;
+    }
+
+    &.is-plain{
+      @include button-plain($backgroundColor);
+    }
+
+    &.is-round{
+      @include button-round();
+    }
+
+    &.is-circle{
+      @include button-circle();
+    }
+
+    &.is-disabled,&.is-loading {
+      background-color: mix($--color-white, $backgroundColor);
+      border-color: mix($--color-white, $backgroundColor);
+      color: $--color-white;
+    }
+}
+
+@mixin button-plain($color){
+  background-color: mix($--color-white,$color,90%);
+  border-color: mix($--color-white,$color,60%);
+  color:$color;
+
+  &:hover,&:focus{
+    background-color:  $color;
+    border-color:  $color;
+    color:$--color-white;
+  }
+
+  &:active {
+    background-color: mix($--color-black,$color,$--button-active-shade-percent);
+    border-color:mix($--color-black,$color,$--button-active-shade-percent);
+    color:$--color-white;
+  }
+
+  &.is-disabled,&.is-loading {
+    background-color: mix($--color-white, $color, 90%);
+    border-color: mix($--color-white, $color, 80%);
+    color: mix($--color-white, $color, 40%);
+  }
+}
+
+@mixin button-round(){
+  border-radius: $--button-round-border-radius;
+  padding: $--button-round-padding-vertical $--button-round-padding-horizontal;
+}
+
+@mixin button-circle(){
+  border-radius: $--button-circle-border-radius;
+  padding: $--button-padding-vertical;
+}
+
+@mixin button-size($borderRadius,$paddingVertical,$paddingHorizontal,$fontSize){
+    border-radius: $borderRadius;
+    font-size: $fontSize;
+    &,&.is-round{
+      padding: $paddingVertical $paddingHorizontal;
+    }
+    &.is-circle{
+      padding: $paddingVertical;
+    }
+}
