@@ -1,24 +1,31 @@
-# test
+<<<<<<< HEAD
 
-## Project setup
-```
-npm install
-```
+# mlui(学习编写组件)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+=======
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# ml-ui(组件库)
 
-### Lints and fixes files
-```
-npm run lint
+### 快速开始
+
+#### 1.安装组件库
+
+```bash
+npm i MeleUI
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### 2.引入组件库
+
+```javascript
+//  全部引入
+import 'MeleUI/dist/theme-chalk/index.css';
+import Ml from 'MeleUI';
+Vue.use(Ml);
+
+//  按需引用
+import 'MeleUI/dist/theme-chalk/card.css';
+import { MlCard } from 'MeleUI';
+Vue.use(MlCard);
+```
+
+> > > > > > > melelong

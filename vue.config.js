@@ -1,6 +1,11 @@
 const path = require('path');
 
 module.exports = {
+  pluginOptions: {
+    jestSerializer: {
+      functionMatch: true
+    }
+  },
   pages: {
     index: {
       // 修改项⽬⼊⼝⽂件
