@@ -11,20 +11,20 @@
 #### 1.安装组件库
 
 ```bash
-npm i MeleUI
+npm i mele-ui
 ```
 
 #### 2.引入组件库
 
 ```javascript
 //  全部引入
-import 'MeleUI/dist/theme-chalk/index.css';
-import Ml from 'MeleUI';
+import 'mele-ui/dist/theme-chalk/index.css';
+import Ml from 'mele-ui';
 Vue.use(Ml);
 
 //  按需引用
-import 'MeleUI/dist/theme-chalk/card.css';
-import { MlCard } from 'MeleUI';
+import 'mele-ui/dist/theme-chalk/card.css';
+import { MlCard } from 'mele-ui';
 Vue.use(MlCard);
 ```
 

@@ -1,5 +1,5 @@
 module.exports = {
-  // base: '/MeleUI/',
+  base: '/MeleUI/',
   title: 'MeleUI',
   description: '仿elementUI风格的组件库',
   head: [
@@ -15,8 +15,9 @@ module.exports = {
     nav: [
       { text: '指南', link: '/guide/' },
       { text: '组件', link: '/componentsDocs/' },
-      { text: 'Npm', link: 'https://blog.melelong.com/' },
-      { text: 'GitHub', link: 'https://blog.melelong1.com/' },
+      { text: 'Gitee', link: 'https://gitee.com/mele-long/mele-ui' },
+      { text: 'GitHub', link: 'https://github.com/melelong/MeleUI' },
+      { text: 'Npm', link: 'https://www.npmjs.com/package/mele-ui' },
     ],
     sidebar: [
       {
