@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
   pluginOptions: {
     jestSerializer: {
-      functionMatch: true
-    }
+      functionMatch: true,
+    },
   },
   pages: {
     index: {

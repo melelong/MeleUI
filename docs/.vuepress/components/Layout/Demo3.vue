@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="demoBlock">
     <ml-row>
       <ml-col :span="24"><div class="grid-content bg-purple-dark"></div></ml-col>
     </ml-row>
@@ -28,27 +28,6 @@
     </ml-row>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      dialogVisible: false,
-    };
-  },
-  methods: {
-    handleClose() {
-      this.dialogVisible = false;
-    },
-    open() {
-      console.log("打开了");
-    },
-    close() {
-      console.log("关闭了");
-    },
-  },
-};
-</script>
 <style>
 .ml-row {
   margin-bottom: 20px;
