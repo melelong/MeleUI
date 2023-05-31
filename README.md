@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
 # MeleUI(学习编写组件)
-
-=======
 
 # MeleUI(组件库)
 
@@ -27,5 +23,3 @@ import 'mele-ui/dist/theme-chalk/card.css';
 import { MlCard } from 'mele-ui';
 Vue.use(MlCard);
 ```
-
-> > > > > > > melelong

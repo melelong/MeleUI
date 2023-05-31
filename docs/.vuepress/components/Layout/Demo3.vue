@@ -1,39 +1,28 @@
 <template>
   <div class="demoBlock">
-    <ml-row>
-      <ml-col :span="24"><div class="grid-content bg-purple-dark"></div></ml-col>
-    </ml-row>
-    <ml-row>
-      <ml-col :span="12"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="12"><div class="grid-content bg-purple-light"></div></ml-col>
-    </ml-row>
-    <ml-row>
-      <ml-col :span="8"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="8"><div class="grid-content bg-purple-light"></div></ml-col>
+    <ml-row :gutter="20">
+      <ml-col :span="16"><div class="grid-content bg-purple"></div></ml-col>
       <ml-col :span="8"><div class="grid-content bg-purple"></div></ml-col>
     </ml-row>
-    <ml-row>
-      <ml-col :span="6"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="6"><div class="grid-content bg-purple-light"></div></ml-col>
-      <ml-col :span="6"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="6"><div class="grid-content bg-purple-light"></div></ml-col>
+    <ml-row :gutter="20">
+      <ml-col :span="8"><div class="grid-content bg-purple"></div></ml-col>
+      <ml-col :span="8"><div class="grid-content bg-purple"></div></ml-col>
+      <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
+      <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
     </ml-row>
-    <ml-row>
+    <ml-row :gutter="20">
       <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple-light"></div></ml-col>
+      <ml-col :span="16"><div class="grid-content bg-purple"></div></ml-col>
       <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple-light"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple-light"></div></ml-col>
     </ml-row>
   </div>
 </template>
-<style>
+<style lang="scss" scoped>
 .ml-row {
   margin-bottom: 20px;
-}
-.ml-row:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .ml-col {
   border-radius: 4px;

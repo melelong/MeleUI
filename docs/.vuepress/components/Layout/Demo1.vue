@@ -28,12 +28,12 @@
     </ml-row>
   </div>
 </template>
-<style>
+<style lang="scss" scoped>
 .ml-row {
   margin-bottom: 20px;
-}
-.ml-row:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .ml-col {
   border-radius: 4px;

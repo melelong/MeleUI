@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# .sh脚本，win安装git，双击使用
 
 set -e
 npm run docs:build
