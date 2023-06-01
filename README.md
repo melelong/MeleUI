@@ -1,7 +1,5 @@
 # MeleUI
 
-### 快速开始
-
 <p align="center">
   <a target="_blank" href="https://melelong.github.io/MeleUI/" >
     <img width="100" src="https://blog.melelong.com/static/upload/2023-4-30-14-59-24-427-472cf.webp" alt="logo">
@@ -12,6 +10,10 @@
   <p>MeleUI</p>
   <p>仿elementUI风格的组件库</p>
 </h2>
+
+### 快速开始
+
+---
 
 #### 1.安装组件库
 
