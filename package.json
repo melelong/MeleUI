@@ -1,6 +1,6 @@
 {
   "name": "mele-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "A component library based on vue 2 that imitates element ui style",
   "homepage": "https://melelong.github.io/MeleUI/",
