@@ -12,7 +12,7 @@ $linkColors:(
 
 @include b(link){
   position: relative;
-  text-decoration: none;
+  &a{ text-decoration: none;}
   font-size: $--link-font-size;
   font-weight: $--link-font-weight;
   color:$--link-default-font-color;
