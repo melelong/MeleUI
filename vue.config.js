@@ -28,6 +28,7 @@ module.exports = {
       .use('babel')
       .loader('babel-loader')
       .tap((options) => options);
+    config.resolve.alias.set('@', path.resolve(__dirname, 'examples'));
     config.resolve.alias.set('@ml', path.resolve(__dirname, 'examples/components/ml'));
   },
 };

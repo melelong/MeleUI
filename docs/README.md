@@ -15,7 +15,9 @@ features:
 footer: MIT Licensed | Copyright © 2022-present melelong
 ---
 
-## [安装](/guide/install.html)
+---
+
+### [安装](/guide/install.html)
 
 ```bash
 # npm安装

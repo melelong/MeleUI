@@ -1,5 +1,5 @@
 @import './mixins/mixins.scss';
-@import './mixins/link';
+@import './mixins/_link.scss';
 @import './common/var.scss';
 
 $linkColors:(
@@ -12,7 +12,7 @@ $linkColors:(
 
 @include b(link){
   position: relative;
-  &a{ text-decoration: none;}
+  text-decoration: none;
   font-size: $--link-font-size;
   font-weight: $--link-font-weight;
   color:$--link-default-font-color;

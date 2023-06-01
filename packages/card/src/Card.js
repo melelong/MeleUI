@@ -28,6 +28,9 @@ export default {
     }, this.$slots.header);
     const body = h('div', {
       class: 'ml-card__body',
+      on: {
+        click: (e) => this.$emit('click', e),
+      },
       style: this.bodyStyle,
     }, this.$slots.default);
     const childrenNode = [header, body];

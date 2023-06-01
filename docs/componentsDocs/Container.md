@@ -18,6 +18,8 @@ title: Container 布局容器
 
 > 以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，`<ml-container>` 的子元素只能是后四者，后四者的父元素也只能是 `<ml-container>`。
 
+---
+
 ### 常见页面布局
 
 <Container-Demo1 />
@@ -120,11 +122,13 @@ body > .ml-container {
 
 :::
 
+---
+
 ### Container 属性
 
 | 参数      | 说明             | 类型   | 可选值                | 默认值                                                             |
 | --------- | ---------------- | ------ | --------------------- | ------------------------------------------------------------------ |
-| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 el-header 或 el-footer 时为 vertical，否则为 horizontal |
+| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 ml-header 或 ml-footer 时为 vertical，否则为 horizontal |
 | tag       | 自定义元素标签   | string | \*                    | div                                                                |
 
 ### Header 属性

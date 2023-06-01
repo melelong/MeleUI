@@ -6,8 +6,6 @@ title: 主题样式
 
 ### 在项目中改变 SCSS 变量
 
----
-
 可以在 `node_modules/mele-ui/examples/assets/theme-chalk/common/var.scss`中修改定义好的默认样式变量
 
 ::: details 查看代码

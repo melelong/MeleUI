@@ -1,58 +1,35 @@
 <template>
   <div class="demoBlock">
-    <ml-row>
-      <ml-col :span="24"><div class="grid-content bg-purple-dark"></div></ml-col>
-    </ml-row>
-    <ml-row>
-      <ml-col :span="12"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="12"><div class="grid-content bg-purple-light"></div></ml-col>
-    </ml-row>
-    <ml-row>
-      <ml-col :span="8"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="8"><div class="grid-content bg-purple-light"></div></ml-col>
-      <ml-col :span="8"><div class="grid-content bg-purple"></div></ml-col>
-    </ml-row>
-    <ml-row>
-      <ml-col :span="6"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="6"><div class="grid-content bg-purple-light"></div></ml-col>
-      <ml-col :span="6"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="6"><div class="grid-content bg-purple-light"></div></ml-col>
-    </ml-row>
-    <ml-row>
-      <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple-light"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple-light"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple"></div></ml-col>
-      <ml-col :span="4"><div class="grid-content bg-purple-light"></div></ml-col>
-    </ml-row>
+    <ml-card class="box-card">
+      <div slot="header" class="clearfix">
+        <span>卡片名称</span>
+        <ml-button style="float: right; padding: 3px 0" type="text">操作按钮</ml-button>
+      </div>
+      <div v-for="o in 4" :key="o" class="text item">
+        {{ "列表内容 " + o }}
+      </div>
+    </ml-card>
   </div>
 </template>
-<style lang="scss" scoped>
-.ml-row {
-  margin-bottom: 20px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+<style>
+.text {
+  font-size: 14px;
 }
-.ml-col {
-  border-radius: 4px;
+
+.item {
+  margin-bottom: 18px;
 }
-.bg-purple-dark {
-  background: #99a9bf;
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
 }
-.bg-purple {
-  background: #d3dce6;
+.clearfix:after {
+  clear: both;
 }
-.bg-purple-light {
-  background: #e5e9f2;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
+
+.box-card {
+  width: 480px;
 }
 </style>

@@ -6,6 +6,8 @@ title: Button 按钮
 
 常用的操作按钮。
 
+---
+
 ### 基础用法
 
 基础的按钮用法。
@@ -127,7 +129,7 @@ title: Button 按钮
 
 <Button-Demo4 />
 
-> 设置 `icon` 属性即可，icon 的列表可以参考 Element 的 icon 组件，也可以设置在文字右边的 icon ，只要使用 `i` 标签即可，可以使用自定义图标。
+> 设置 `icon` 属性即可，icon 的列表可以参考 [elementUI](https://element.eleme.cn/#/zh-CN/component/icon) 的 icon 组件，也可以设置在文字右边的 icon ，只要使用 `i` 标签即可，可以使用自定义图标。
 
 ::: details 查看代码
 

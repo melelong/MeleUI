@@ -1,8 +1,15 @@
 <template>
   <div class="demoBlock">
-    <i class="ml-icon-edit"></i>
-    <i class="ml-icon-share"></i>
-    <i class="ml-icon-delete"></i>
-    <ml-button type="primary" icon="ml-icon-search">搜索</ml-button>
+    <ml-radio v-model="radio" label="1">备选项</ml-radio>
+    <ml-radio v-model="radio" label="2">备选项</ml-radio>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      radio: "1",
+    };
+  },
+};
+</script>
