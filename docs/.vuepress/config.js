@@ -4,7 +4,7 @@ module.exports = {
   description: '仿elementUI风格的组件库',
   head: [
     // 浏览器标签页面图标
-    ['link', { rel: 'icon', href: 'https://blog.melelong.com/static/upload/2023-4-30-14-59-24-427-472cf.webp' }],
+    ['link', { rel: 'icon', href: 'https://blog.melelong.com/favicon.webp' }],
   ],
   plugins: ['@vuepress/back-to-top'],
   // 主题配置
@@ -18,7 +18,7 @@ module.exports = {
       bottom: "2rem"
     },
     displayAllHeaders: true, // 默认值：false
-    logo: 'https://blog.melelong.com/static/upload/2023-4-30-14-59-24-427-472cf.webp',
+    logo: 'https://blog.melelong.com/favicon.webp',
     nav: [
       { text: '主页', link: '/' },
       { text: '指南', link: '/guide/' },

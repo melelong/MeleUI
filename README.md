@@ -2,7 +2,7 @@
 
 <p align="center">
   <a target="_blank" href="https://melelong.github.io/MeleUI/" >
-    <img width="100" src="https://blog.melelong.com/static/upload/2023-4-30-14-59-24-427-472cf.webp" alt="logo">
+    <img width="100" src="https://blog.melelong.com/favicon.webp" alt="logo">
   </a>
 </p>
 

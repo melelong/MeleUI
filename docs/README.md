@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://blog.melelong.com/static/upload/2023-4-30-14-59-24-427-472cf.webp
+heroImage: https://blog.melelong.com/favicon.webp
 heroText: MeleUI
 tagline: 仿elementUI风格的组件库
 actionText: 快速上手 →
